@@ -15,17 +15,17 @@ namespace TheObserverPattern
             Stock MaerskA = new Stock("MaerskA", 850);
             Stock MaerskB = new Stock("MaerskB", 750);
 
-            p1.AddStock(MaerskA,2);
+            p1.AddStock(MaerskA, 2);
             p1.AddStock(MaerskB, 3);
 
             //MaerskA.Notify();
             //MaerskB.Notify();
 
-            MaerskB.StockValue = 600;
+            MaerskB.SetStockValue(600);
 
             MaerskB.Notify();
 
-            
+            Console.WriteLine($"New MaerskB Stock value: {MaerskB.StockValue}");
 
             DisplayPortfolio dp1 = new DisplayPortfolio();
 

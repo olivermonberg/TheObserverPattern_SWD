@@ -27,20 +27,26 @@ namespace TheObserverPattern
         public void AddStock(Stock _stock, int amount)
         {
             _stock.Attach(this);
-
-
-            LocalStock l = new LocalStock();
-            l.Name = _stock.Name;
-            l.StockValue = _stock.StockValue;
-            l.AmountOfStocks = amount;
+            
+            LocalStock l = new LocalStock
+            {
+                Name = _stock.Name,
+                StockValue = _stock.StockValue,
+                AmountOfStocks = amount
+            };
             _LocalStocksList.Add(l);
         }
 
-        public void Update(Stock _stock)
+
+        /*
+         * Der er NOGET GALT MED UPDATE AF PORTEFØLJE
+         */
+        public void Update(Stock _stock) 
         {
             LocalStock index = _LocalStocksList.Find(x => x.Name == _stock.Name);
 
             index.StockValue = _stock.StockValue;
+            
         }
 
         //int AmountOfStocks;

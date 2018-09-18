@@ -35,11 +35,11 @@ namespace TheObserverPattern
         public void SetStockValue(double _stockValue)
         {
             StockValue = _stockValue;
-            Notify();
         }
 
         public string Name { get; set; }
         public double StockValue { get; set; }
+        
 
         public List<IPortfolio> _portfolio = new List<IPortfolio>();
 
