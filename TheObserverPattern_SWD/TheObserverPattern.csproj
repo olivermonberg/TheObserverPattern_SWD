@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoogleStock.cs" />
     <Compile Include="MaerskStock.cs" />
     <Compile Include="Portfolio.cs" />
     <Compile Include="Program.cs" />

@@ -8,13 +8,10 @@ namespace TheObserverPattern
 {
     public class MaerskStock : Stock
     {
-       public MaerskStock(string name, double stockValue)
-        {
-
-        }
-
-
-
-        
+       public MaerskStock(double _stockValue)
+       {
+           Name = "Maersk";
+           StockValue = _stockValue;
+       }
     }
 }
